@@ -146,7 +146,7 @@ class DrawingApp:
             if not file_path:
                 return
             self.canvas.postscript(file=file_path)
-            messagebox.showinfo("Сохранено", f"Файл сохранён:\n{file_path}")
+            messagebox.showinfo("Сохранено", f"Рисунок успешно сохранён в файл:\n{file_path}")
         except PermissionError:
             messagebox.showerror("Ошибка доступа", "Нет прав на запись в выбранную папку.")
         except OSError as e:
