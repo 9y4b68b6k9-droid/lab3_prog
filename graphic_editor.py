@@ -137,7 +137,7 @@ class DrawingApp:
         except tk.TclError as e:
             messagebox.showerror("Ошибка", f"Не удалось очистить холст: {e}")
 
-    def save_image(self) -> None:
+    def save_image(self) -> None:  
         try:
             file_path = filedialog.asksaveasfilename(
                 defaultextension=".ps",
