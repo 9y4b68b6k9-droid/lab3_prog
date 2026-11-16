@@ -133,7 +133,7 @@ class DrawingApp:
     def clear_canvas(self) -> None:
         try:
             self.canvas.delete("all")
-            self.canvas.config(bg=self.current_color)
+            self.canvas.config(bg="white")
         except tk.TclError as e:
             messagebox.showerror("Ошибка", f"Не удалось очистить холст: {e}")
 
