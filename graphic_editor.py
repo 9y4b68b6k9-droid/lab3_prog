@@ -90,6 +90,8 @@ class DrawingApp:
     def _on_mouse_drag(self, event: tk.Event) -> None:
         if not self.is_drawing:
             return
+        if abs(event.x - self.last_x) < 2 and abs(event.y - self.last_y) < 2:
+            return   
         try:
             self.canvas.create_line(
                 self.last_x, self.last_y,
