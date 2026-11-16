@@ -122,10 +122,13 @@ class DrawingApp:
             self.brush_size = 3
 
     def choose_color(self) -> None:
-        color = colorchooser.askcolor(title="Выберите цвет кисти")
-        if color[1] is not None:
-            self.current_color = color[1]
-            self.color_btn.config(bg=self.current_color)
+        try:
+            color = colorchooser.askcolor(title="Выберите цвет кисти")
+            if color[1] is not None:
+                self.current_color = color[1]
+                self.color_btn.config(bg=self.current_color)
+        except Exception as e:
+            messagebox.showerror("Ошибка выбора цвета", f"Не удалось применить цвет: {e}")
 
     def clear_canvas(self) -> None:
         try:
