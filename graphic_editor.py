@@ -9,7 +9,7 @@ class DrawingApp:
         self.root.geometry("800x600")
 
         self.current_color: str = "black"
-        self.brush_size: int = 3
+        self.brush_size: int = 5
         self.last_x: int | None = None
         self.last_y: int | None = None
         self.is_drawing: bool = False
